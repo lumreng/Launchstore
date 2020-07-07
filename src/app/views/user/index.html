@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% import "parts/card.html" as card %}
+
+{% block content %}
+
+    {% call card.render('Detalhes', 'users-dashboard container') %}
+        <form method="POST" action="/users?_method=PUT">
+        
+            <div class="fields">
+                {% include 'user/fields.html' %}
+                <input type="hidden" name="id" value={{user.id}}>
+            </div>
+            
+            <button class="button edit" type="submit">Atualizar</button>
+            
+        </form>
+
+        <form id="form-delete" action="/users?_method=DELETE" method="post">
+            <input type="hidden" name="id" value={{user.id}}>
+            <button class="button delete" type="submit">Deletar</button>
+        </form>
+    {% endcall %}
+
+    <script>
+        const formDelete = document.querySelector("#form-delete");
+        formDelete.addEventListener("sumit", function(event) {
+            const confirmation = confirm("Deseja deletar?");
+            if(!confirmation) {
+                event.preventDefault();
+            };
+        });
+    </script>
+
+{% endblock content %}

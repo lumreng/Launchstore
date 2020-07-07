@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% import "parts/card.html" as card %}
+
+{% block content %}
+
+    {% call card.render('Registrar', 'users-register container') %}
+        <form method="POST" action="/users/register">
+        
+            <div class="fields">
+                {% include 'user/fields.html' %}
+            </div>
+            
+            <button class="button" type="submit">Salvar</button>
+            
+        </form>
+    {% endcall %}
+
+{% endblock content %}

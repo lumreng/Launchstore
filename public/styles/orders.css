@@ -1,0 +1,41 @@
+.order-success {
+    padding: 0;
+    padding-bottom: 112px;
+    text-align: center;
+    margin: auto;
+}
+
+.order-success .success-lottie{
+    height: 200px;
+}
+
+.order-success a {
+    color: var(--cor1);
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.order-error {
+    padding: 0;
+    padding-bottom: 112px;
+    text-align: center;
+    margin: auto;
+}
+
+.order-error .error-lottie{
+    height: 200px;
+}
+
+.order-error a {
+    color: var(--cor1);
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+}

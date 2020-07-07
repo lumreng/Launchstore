@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% import "parts/card.html" as card %}
+
+{% block content %}
+
+    {% call card.render('Entrar', 'login container') %}
+        <form method="POST" action="/users/login">
+
+            <div class="fields">
+                {% include 'session/fields.html' %}
+            </div>
+                
+            <button class="button" type="submit">Entrar</button>
+
+            <div class="footer">
+                <ul>
+                    <li>
+                        <a href="/users/register">Registrar</a>
+                    </li>
+                    <li>
+                        <a href="/users/forgot-password">Lembrar senha</a>
+                    </li>
+                </ul>
+            </div>
+                
+        </form>
+    {% endcall %}
+
+{% endblock content %}

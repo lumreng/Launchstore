@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+
+        {% block head %}
+            <title>Launchstore</title>
+        {% endblock head %}
+
+        {%include "parts/styles.html"%}
+        
+    </head>
+    <body>
+        {%include "parts/messages.html"%}
+    
+        {%include "parts/header.html"%}
+
+        {% block content %}{% endblock content %}
+
+        {%include "parts/footer.html"%}
+    
+    </body>
+</html>

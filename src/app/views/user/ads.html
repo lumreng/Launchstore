@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% import "parts/card.html" as card %}
+
+{% block content %}
+
+{% call card.render('Meus Anúncios', 'users-ads container') %}
+
+    <div class="items">
+        {% for product in products %}
+
+            <div class="item">
+
+                <div class="image">
+                    <img src="{{product.files[0].src if product.files[0].src else '//placehold.it/500x500?text=Produto sem imagem'}}" alt="">
+                </div>
+
+                <div class="info">
+                    
+                    <div class="title">{{product.name}}</div>
+
+                    <div class="price">{{product.formattedPrice}}</div>
+
+                    <div class="published">Publicado em {{product.published.day}} às {{product.published.hour}}</div>
+
+                    <div class="actions">
+                        <a href="/products/{{product.id}}/edit">Editar</a>
+                        <a href="/products/{{product.id}}">Ver</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endcall %}
+
+{% endblock content %}
