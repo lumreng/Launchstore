@@ -2,7 +2,7 @@
 
 ## Objetivos
 
-Uma aplicação para venda de produtos, similar ao famoso Mercado Livre. O usuário pode criar anuúncios, vendendo o seu produto. Se alguem se interessar pelo produto, o site avisa o anunciante por e-mail, juntamente com os dados do interessado.
+Uma aplicação para venda de produtos, similar ao famoso Mercado Livre. O usuário pode criar anúncios, vendendo o seu produto. Se alguem se interessar pelo produto, o site avisa o anunciante por e-mail, juntamente com os dados do interessado.
 Assim, eles podem entrar em contato um com o outro e finalizar a compra/venda.
 
 ## Tecnologias
